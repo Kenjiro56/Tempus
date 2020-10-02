@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.position += new Vector3(-speed, 0, 0);
         if (Input.GetKey(KeyCode.UpArrow)) {
             transform.position += new Vector3(0,-jumppower,0);
         }
@@ -24,15 +25,21 @@ public class PlayerScript : MonoBehaviour
 
             transform.position += new Vector3(0, jumppower, 0);
         }
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
+        //if (Input.GetKey(KeyCode.RightArrow))
+        //{
 
-            transform.position += new Vector3(-speed, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
+        //    transform.position += new Vector3(-speed, 0, 0);
+        //}
+        //if (Input.GetKey(KeyCode.LeftArrow))
+        //{
 
-            transform.position += new Vector3(speed, 0, 0);
+        //    transform.position += new Vector3(speed, 0, 0);
+        //}
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.name == "Start") {
+            charaScript.reve = false;
         }
     }
 }

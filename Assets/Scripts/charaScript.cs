@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class charaScript : MonoBehaviour
 {
+    static public bool reve = true;
     public float speed = 0.5f;
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,8 @@ public class charaScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(speed,0,0);
+        if (!reve) {
+            transform.position += new Vector3(speed, 0, 0);
+        }
     }
 }
