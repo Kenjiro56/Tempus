@@ -20,8 +20,13 @@ public class charaScript : MonoBehaviour
         if (!reve) {
             transform.position += new Vector3(speed, 0, 0);
             rb.useGravity = true;
-        } 
-        
+        }
+
+        if (this.transform.position.y <= -10)
+        {
+            Debug.Log("GameOver");
+        }
+
     }
     private void OnCollisionEnter(Collision collision)
     {

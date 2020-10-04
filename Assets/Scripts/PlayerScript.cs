@@ -8,7 +8,10 @@ public class PlayerScript : MonoBehaviour
     public float jumppower = 0.5f;
     public float speed = 0.5f;
     public GameObject[] item;
-//    float destroy_timer = 0.0f;
+
+    static public int number_used = 0;
+    static public int score = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,8 +31,24 @@ public class PlayerScript : MonoBehaviour
         
         }
         if (Input.GetKeyDown(KeyCode.Space)) {
+
             Instantiate(item[0],this.transform.position,Quaternion.identity);
+            number_used++;
         }
+
+        if (this.transform.position.y <= -10) {
+            if (charaScript.reve) {
+
+                Debug.Log("GameOver");
+
+            } else{
+
+                Destroy(this.gameObject);
+
+            }
+        }
+
+        score = 100 - number_used;
         
     }
     private void OnTriggerEnter(Collider other)
@@ -37,7 +56,7 @@ public class PlayerScript : MonoBehaviour
         
         if (other.gameObject.name == "Start") {
             charaScript.reve = false;
-           // Destroy(this.gameObject);
+            
         }
     }
 }
