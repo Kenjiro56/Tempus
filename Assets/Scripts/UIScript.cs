@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class camerascript : MonoBehaviour
+public class UIScript : MonoBehaviour
 {
-    public GameObject chara;
+    public Text retrograde;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,11 +15,8 @@ public class camerascript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (!charaScript.reve) {
-
-            this.transform.parent = chara.transform;
-
+        if (charaScript.reve) {
+            retrograde.text.SetActive(false);
         }
     }
 }
