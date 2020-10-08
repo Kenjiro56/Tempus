@@ -12,11 +12,16 @@ public class PlayerScript : MonoBehaviour
     //GameObject using_item;
     static public int number_used = 0;
     static public int score = 100;
+    public GameObject playermodel;
+
+    Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        animator = playermodel.GetComponent<Animator>();
+        
         //using_item = item[0];
         
     }
@@ -27,11 +32,14 @@ public class PlayerScript : MonoBehaviour
         Vector3 jumppower = new Vector3(0, 300f, 0);
         transform.position += new Vector3(-speed, 0, 0);
 
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-
+            animator.SetBool("Jump", true);
             rb.AddForce(jumppower);
 
+        } else if (Input.GetKeyUp(KeyCode.UpArrow)) {
+            animator.SetBool("Jump", false);
+            animator.SetBool("Run",true);
         }
 
 

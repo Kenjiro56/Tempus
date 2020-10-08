@@ -261,6 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  charamodel: {fileID: 1639540876}
 --- !u!136 &149141410
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -426,6 +427,12 @@ Transform:
   m_Father: {fileID: 1814088924}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1021125480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: cf3910b7639e12447827e45f63f60201,
+    type: 3}
+  m_PrefabInstance: {fileID: 1516745014}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1072229581
 GameObject:
   m_ObjectHideFlags: 0
@@ -1118,7 +1125,6 @@ GameObject:
   - component: {fileID: 1567427369}
   - component: {fileID: 1567427374}
   - component: {fileID: 1567427370}
-  - component: {fileID: 1567427375}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1234,25 +1240,7 @@ MonoBehaviour:
   - {fileID: 3403180707801582378, guid: cc9cbb0d614884900bce4a25f74dc673, type: 3}
   - {fileID: 2263059883419741907, guid: 3341aa1f2845440d7abf8f475a05b359, type: 3}
   amount_item: 2
---- !u!95 &1567427375
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1567427368}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa09375e31ee0470cb0ef341fa3812eb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  playermodel: {fileID: 1021125480}
 --- !u!1 &1571568573
 GameObject:
   m_ObjectHideFlags: 0
@@ -1332,6 +1320,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1571568573}
   m_CullTransparentMesh: 0
+--- !u!1 &1639540876 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100004, guid: cf3910b7639e12447827e45f63f60201,
+    type: 3}
+  m_PrefabInstance: {fileID: 1977691351}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1766944486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1663,6 +1657,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: cf3910b7639e12447827e45f63f60201, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: aa09375e31ee0470cb0ef341fa3812eb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf3910b7639e12447827e45f63f60201, type: 3}
 --- !u!4 &1977691352 stripped
