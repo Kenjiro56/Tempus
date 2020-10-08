@@ -15,7 +15,7 @@ public class PlayerScript : MonoBehaviour
     public GameObject playermodel;
 
     Animator animator;
-
+    public Collider coliider;
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +94,8 @@ public class PlayerScript : MonoBehaviour
                 if (other.gameObject.name == "Start") {
                     charaScript.reve = false;
 
+
+            coliider.isTrigger = true;
                 }
             }
 }
