@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerScript : MonoBehaviour
 {
     Rigidbody rb;
-    //public float jumppower = 0.5f;
+    
     public float speed = 0.5f;
     public GameObject[] item;
-    public int amount_item;
+    static public int amount_item=2;
     //GameObject using_item;
     static public int number_used = 0;
     static public int score = 100;

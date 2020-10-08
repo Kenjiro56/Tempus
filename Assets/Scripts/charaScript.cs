@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class charaScript : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class charaScript : MonoBehaviour
             Debug.Log("Goal!!!!!!");
             speed = 0f;
             chara_animator.SetBool("Run",false);
+            SceneManager.LoadScene("ScoreScene");
         }
     }
 }
