@@ -30,6 +30,9 @@ public class charaScript : MonoBehaviour
         if (this.transform.position.y <= -10)
         {
             Debug.Log("GameOver");
+        } else if (this.transform.position.y <= 5) {
+            chara_animator.SetBool("Run",true);
+
         }
 
     }
