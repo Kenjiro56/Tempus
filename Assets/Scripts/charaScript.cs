@@ -47,4 +47,5 @@ public class charaScript : MonoBehaviour
             SceneManager.LoadScene("ScoreScene");
         }
     }
+
 }
