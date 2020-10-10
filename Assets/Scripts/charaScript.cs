@@ -28,9 +28,9 @@ public class charaScript : MonoBehaviour
             chara_animator.SetBool("Run",true);
         }
 
-        if (this.transform.position.y <= -10)
+        if (this.transform.position.y <= -15)
         {
-            Debug.Log("GameOver");
+            //SceneManager.LoadScene("GameOver");
         } else if (this.transform.position.y <= 5) {
             chara_animator.SetBool("Run",true);
 
@@ -41,7 +41,7 @@ public class charaScript : MonoBehaviour
     {
         if (collision.gameObject.name == "Goal")
         {
-            Debug.Log("Goal!!!!!!");
+           
             speed = 0f;
             chara_animator.SetBool("Run",false);
             SceneManager.LoadScene("ScoreScene");
