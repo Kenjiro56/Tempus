@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class resultscript : MonoBehaviour
 {
-    public int stage_number = 1;
-    public int highscore;
+    int stage_number;
+    
 
 
     public GameObject newrecord;
@@ -15,15 +15,19 @@ public class resultscript : MonoBehaviour
     public Text highscoretext;
     public Text yourscoretext;
     public Text useitemtext;
+
+    int[] highscore = {};
     // Start is called before the first frame update
     void Start()
     {
-        if (highscore < PlayerScript.score) {
-            highscore = PlayerScript.score;
+        Debug.Log(stageselectscript.chosingstage);
+        stage_number = stageselectscript.chosingstage;
+        if (highscore[stage_number - 1] < PlayerScript.score) {
+            highscore[stage_number - 1] = PlayerScript.score;
             newrecord.SetActive(true);
         }
         stagetext.text = "Stage : " + stage_number.ToString();
-        highscoretext.text = "High Score : " + highscore.ToString();
+        highscoretext.text = "High Score : " + highscore[stage_number - 1].ToString();
         yourscoretext.text = "Your Score : " + PlayerScript.score.ToString();
         useitemtext.text = "Use Item : " + PlayerScript.number_used.ToString();
     }
