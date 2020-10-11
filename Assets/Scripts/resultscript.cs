@@ -22,12 +22,12 @@ public class resultscript : MonoBehaviour
     {
         Debug.Log(stageselectscript.chosingstage);
         stage_number = stageselectscript.chosingstage;
-        if (highscore[stage_number - 1] < PlayerScript.score) {
-            highscore[stage_number - 1] = PlayerScript.score;
+        if (highscore[stage_number] < PlayerScript.score) {
+            highscore[stage_number] = PlayerScript.score;
             newrecord.SetActive(true);
         }
         stagetext.text = "Stage : " + stage_number.ToString();
-        highscoretext.text = "High Score : " + highscore[stage_number - 1].ToString();
+        highscoretext.text = "High Score : " + highscore[stage_number].ToString();
         yourscoretext.text = "Your Score : " + PlayerScript.score.ToString();
         useitemtext.text = "Use Item : " + PlayerScript.number_used.ToString();
     }
