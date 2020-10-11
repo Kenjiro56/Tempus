@@ -25,6 +25,7 @@ public class jumpcubescript : MonoBehaviour
             charaScript.chara_animator.SetBool("Jump",true);
             chara_rb.AddForce(force);
             Destroy(this.gameObject);
+            
         }
     }
    

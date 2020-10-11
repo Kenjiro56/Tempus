@@ -16,12 +16,12 @@ public class damageblockscript : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider col)
     {
-        if (other.gameObject.tag == "Enemy") {
-            Destroy(other.gameObject);
+        if (col.gameObject.tag == "Enemy") {
+            Destroy(col.gameObject);
             Destroy(this.gameObject);
-        } else if (other.gameObject.name == "chara") {
+        } else if (col.gameObject.name == "chara") {
 
             Vector3 force = new Vector3(1000f,0,0);
             rb.AddForce(force);

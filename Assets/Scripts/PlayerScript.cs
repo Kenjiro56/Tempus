@@ -22,15 +22,18 @@ public class PlayerScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         animator = playermodel.GetComponent<Animator>();
-        
+
         //using_item = item[0];
-        
+
+
+        number_used = 0;
+        score = 100;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 jumppower = new Vector3(0, 300f, 0);
+        Vector3 jumppower = new Vector3(0, 250f, 0);
         transform.position += new Vector3(-speed, 0, 0);
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
@@ -96,7 +99,7 @@ public class PlayerScript : MonoBehaviour
                     charaScript.reve = false;
 
 
-            coliider.isTrigger = true;
+                    coliider.isTrigger = true;
                 }
             }
 }

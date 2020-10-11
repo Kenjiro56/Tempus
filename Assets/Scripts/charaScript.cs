@@ -14,6 +14,7 @@ public class charaScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        reve = true;
         rb = GetComponent<Rigidbody>();
         chara_animator = charamodel.GetComponent<Animator>();
         chara_animator.SetBool("Run", false);
@@ -30,7 +31,7 @@ public class charaScript : MonoBehaviour
 
         if (this.transform.position.y <= -15)
         {
-            //SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver");
         } else if (this.transform.position.y <= 5) {
             chara_animator.SetBool("Run",true);
 

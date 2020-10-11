@@ -1041,6 +1041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chara: {fileID: 149141407}
+  player: {fileID: 1567427368}
 --- !u!1 &1425622121
 GameObject:
   m_ObjectHideFlags: 0

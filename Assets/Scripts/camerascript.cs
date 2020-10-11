@@ -5,10 +5,11 @@ using UnityEngine;
 public class camerascript : MonoBehaviour
 {
     public GameObject chara;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.transform.parent = player.transform;
     }
 
     // Update is called once per frame
