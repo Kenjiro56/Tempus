@@ -16,18 +16,18 @@ public class resultscript : MonoBehaviour
     public Text yourscoretext;
     public Text useitemtext;
 
-    int[] highscore = {};
+    int[] highscore = new int[3];
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(stageselectscript.chosingstage);
+        
         stage_number = stageselectscript.chosingstage;
-        if (highscore[stage_number] < PlayerScript.score) {
-            highscore[stage_number] = PlayerScript.score;
+        if (highscore[stage_number - 1] < PlayerScript.score) {
+            highscore[stage_number - 1] = PlayerScript.score;
             newrecord.SetActive(true);
         }
         stagetext.text = "Stage : " + stage_number.ToString();
-        highscoretext.text = "High Score : " + highscore[stage_number].ToString();
+        highscoretext.text = "High Score : " + highscore[stage_number - 1].ToString();
         yourscoretext.text = "Your Score : " + PlayerScript.score.ToString();
         useitemtext.text = "Use Item : " + PlayerScript.number_used.ToString();
     }
