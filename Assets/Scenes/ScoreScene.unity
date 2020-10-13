@@ -154,7 +154,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 32, y: 108}
+  m_AnchoredPosition: {x: 18, y: 108}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &63830361
@@ -233,7 +233,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 44, y: 166}
+  m_AnchoredPosition: {x: 30, y: 166}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287961139
@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: -900027084, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.5}
   m_EffectDistance: {x: 1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!114 &360411712
@@ -761,8 +761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03a7f1a9cb3074511aa9783e379f2ec5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stage_number: 1
-  highscore: 0
   newrecord: {fileID: 1531644295}
   stagetext: {fileID: 63830361}
   highscoretext: {fileID: 570470247}
@@ -1344,7 +1342,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1345249886}
-        m_MethodName: toStageselect
+        m_MethodName: ToStageselect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -9,12 +9,13 @@ public class stageselectscript : MonoBehaviour
     public GameObject[] stage;
     public GameObject player;
     static public int chosingstage=0;
-    
-    //static int selectedstage;
+
+    public GameObject menupanel;
+    bool panel;
     // Start is called before the first frame update
     void Start()
     {
-        //player.transform.parent = stage[0].transform
+        panel = false;
         player.transform.position = new Vector3(0,0.5f,0) + stage[0].transform.position;
     }
 
@@ -22,32 +23,45 @@ public class stageselectscript : MonoBehaviour
     void Update()
     {
 
-        
-        player.transform.position = new Vector3(0, 0.5f, 0) + stage[chosingstage].transform.position;
+        menupanel.SetActive(panel);
 
-        if (Input.GetKeyDown(KeyCode.RightArrow)) {
-            if (chosingstage < 3)
+        if (!panel)
+        {
+            player.transform.position = new Vector3(0, 0.5f, 0) + stage[chosingstage].transform.position;
+
+            if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                chosingstage++;
-            }
-            
+                if (chosingstage < 3)
+                {
+                    chosingstage++;
+                }
 
-        } else if (Input.GetKeyDown(KeyCode.LeftArrow)) {
-            if (chosingstage > 0)
+
+            }
+            else if (Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                chosingstage--;
+                if (chosingstage > 0)
+                {
+                    chosingstage--;
+                }
+
+
             }
-            
-
-        } else if (Input.GetKeyDown(KeyCode.Space)) {
-
-
-            
-            SceneManager.LoadScene("Stage" + chosingstage.ToString());
+            else if (Input.GetKeyDown(KeyCode.Space))
+            {
 
 
+
+                SceneManager.LoadScene("Stage" + chosingstage.ToString());
+
+
+
+            }
 
         }
 
+    }
+    public void MenuPanel() {
+        panel = !panel;
     }
 }

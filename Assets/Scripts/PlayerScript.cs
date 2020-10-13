@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
     
     public float speed = 0.5f;
     public GameObject[] item;
-    public static int amount_item=2;
+    public static int amount_item;
     //GameObject using_item;
     public　static int number_used = 0;
     public static int score = 100;
@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour
         animator = playermodel.GetComponent<Animator>();
 
         //using_item = item[0];
-
+        amount_item = stageselectscript.chosingstage;
 
         number_used = 0;
         score = 100;
