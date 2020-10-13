@@ -16,7 +16,7 @@ public class resultscript : MonoBehaviour
     public Text yourscoretext;
     public Text useitemtext;
 
-    int[] highscore = new int[3];
+    static int[] highscore = new int[3];
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +40,7 @@ public class resultscript : MonoBehaviour
     public void ToRetry(){
         SceneManager.LoadScene("Stage" + stage_number.ToString());
     }
-    public void toStageselect() {
+    public void ToStageselect() {
         SceneManager.LoadScene("StageSelect");
     }
 }

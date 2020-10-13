@@ -9,10 +9,10 @@ public class PlayerScript : MonoBehaviour
     
     public float speed = 0.5f;
     public GameObject[] item;
-    static public int amount_item=2;
+    public static int amount_item=2;
     //GameObject using_item;
-    static public int number_used = 0;
-    static public int score = 100;
+    public　static int number_used = 0;
+    public static int score = 100;
     public GameObject playermodel;
 
     Animator animator;

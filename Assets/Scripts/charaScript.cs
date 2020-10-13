@@ -33,7 +33,8 @@ public class charaScript : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         } else if (this.transform.position.y <= 5) {
-            chara_animator.SetBool("Run",true);
+
+            chara_animator.SetBool("Jump",false);
 
         }
 

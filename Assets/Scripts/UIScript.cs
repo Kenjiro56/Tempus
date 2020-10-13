@@ -31,18 +31,7 @@ public class UIScript : MonoBehaviour
         {
             retrograde.enabled = false;
             backimage.enabled = false;
-        }
-        else {
-
-
-            
-            //changecolortime += Time.deltaTime;
-            //backimage.color = new Color(255f,0,0,changecolortime * 0.1f);
-            //if (changecolortime >= 75) {
-            //    changecolortime = 0;
-            //}
-            //Debug.Log(changecolortime*0.1f);
-
+        
         }
         scoretext.text = "Score : " + PlayerScript.score.ToString();
         usedtext.text =  "Item Count: " + PlayerScript.number_used.ToString();

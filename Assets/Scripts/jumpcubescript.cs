@@ -20,7 +20,7 @@ public class jumpcubescript : MonoBehaviour
     {
         if (col.gameObject.name == "chara") {
             chara_rb = col.gameObject.GetComponent<Rigidbody>();
-            Vector3 force = new Vector3(0,500f,0);
+            Vector3 force = new Vector3(0,300f,0);
 
             charaScript.chara_animator.SetBool("Jump",true);
             chara_rb.AddForce(force);
