@@ -40,6 +40,7 @@ public class PlayerScript : MonoBehaviour
         {
             animator.SetBool("Jump", true);
             rb.AddForce(jumppower);
+            Debug.Log(rb.velocity.y);
 
         } else if (Input.GetKeyUp(KeyCode.UpArrow)) {
             animator.SetBool("Jump", false);

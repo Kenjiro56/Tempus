@@ -64,4 +64,7 @@ public class stageselectscript : MonoBehaviour
     public void MenuPanel() {
         panel = !panel;
     }
+    public void ToTitle() {
+        SceneManager.LoadScene("Title");
+    }
 }
