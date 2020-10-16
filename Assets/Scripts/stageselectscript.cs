@@ -67,4 +67,16 @@ public class stageselectscript : MonoBehaviour
     public void ToTitle() {
         SceneManager.LoadScene("Title");
     }
+    public void ToTutorial() {
+        SceneManager.LoadScene("Tutorial");
+    }
+    public void ToDescription()
+    {
+        SceneManager.LoadScene("Description");
+    }
+    public void Toitemlist()
+    {
+        SceneManager.LoadScene("ItemList");
+    }
+
 }
