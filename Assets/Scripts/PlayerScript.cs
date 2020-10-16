@@ -33,14 +33,21 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        int jumpcount = 0;
         Vector3 jumppower = new Vector3(0, 250f, 0);
         transform.position += new Vector3(-speed, 0, 0);
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            animator.SetBool("Jump", true);
-            rb.AddForce(jumppower);
-            Debug.Log(rb.velocity.y);
+            if (rb.velocity.y==0) {
+                animator.SetBool("Jump", true);
+                rb.AddForce(jumppower);
+                jumpcount = 0;
+            }
+            
+            jumpcount++;
+            
+           
 
         } else if (Input.GetKeyUp(KeyCode.UpArrow)) {
             animator.SetBool("Jump", false);
