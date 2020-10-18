@@ -23,7 +23,7 @@ public class PlayerScript : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = playermodel.GetComponent<Animator>();
 
-        //using_item = item[0];
+        
         amount_item = stageselectscript.chosingstage;
 
         number_used = 0;
@@ -56,18 +56,7 @@ public class PlayerScript : MonoBehaviour
 
 
         ////itemの生成
-        //if (Input.GetKeyDown(KeyCode.Space)) {
-
-        //    Instantiate(using_item,this.transform.position,Quaternion.identity);
-        //    number_used++;
-        //}
-
-        ////item選択
-        //for (int i= 0; i<= amount_item; ++i) {
-        //    if (Input.GetKeyDown(i.ToString())) {
-        //        using_item = item[i-1];
-        //    }
-        //}
+       
         //item生成
         for (int i = 0; i <= amount_item; ++i)
         {
