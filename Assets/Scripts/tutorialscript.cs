@@ -62,7 +62,8 @@ public class tutorialscript : MonoBehaviour
                 
                 playerscript.enabled = false;
                 animator.enabled = false;
-                
+                panels[7].SetActive(true);
+                currentnumber = 7;
             }
             
             if (Input.GetKeyDown(1.ToString()))

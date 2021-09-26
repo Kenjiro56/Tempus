@@ -14,9 +14,10 @@ public class PlayerScript : MonoBehaviour
     public　static int number_used = 0;
     public static int score = 100;
     public GameObject playermodel;
+    int jumpcount = 0;
 
     Animator animator;
-    public Collider coliider;
+    public Collider collider;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,19 +34,23 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        int jumpcount = 0;
+        //if (rb.velocity.y==0) {
+        //    Debug.Break();
+        //}
+        
         Vector3 jumppower = new Vector3(0, 250f, 0);
         transform.position += new Vector3(-speed, 0, 0);
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            if (rb.velocity.y==0) {
+            if (rb.velocity.y == 0) {
+    
                 animator.SetBool("Jump", true);
                 rb.AddForce(jumppower);
-                jumpcount = 0;
+                jumpcount =1;
             }
             
-            jumpcount++;
+ 
             
            
 
@@ -96,7 +101,7 @@ public class PlayerScript : MonoBehaviour
                     charaScript.reve = false;
 
 
-                    coliider.isTrigger = true;
+                    collider.isTrigger = true;
                 }
             }
 }

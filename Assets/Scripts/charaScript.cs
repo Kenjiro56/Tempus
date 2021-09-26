@@ -37,6 +37,9 @@ public class charaScript : MonoBehaviour
             chara_animator.SetBool("Jump",false);
 
         }
+        if (transform.position.y <= -10.0f) {
+            chara_animator.enabled = false;
+        }
 
     }
     private void OnCollisionEnter(Collision collision)
